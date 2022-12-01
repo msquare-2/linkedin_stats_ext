@@ -1,0 +1,11 @@
+{
+    "name": "LinkedIn Stats",
+    "version": "1.0.0",
+    "description": "Latest LinkedIn Stats",
+    "manifest_version": 3,
+    "author": "Mustafa Dhar",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Latest Covid Report"
+    }
+}

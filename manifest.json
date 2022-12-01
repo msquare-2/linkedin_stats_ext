@@ -4,8 +4,14 @@
     "description": "Latest LinkedIn Stats",
     "manifest_version": 3,
     "author": "Mustafa Dhar",
+    "host_permissions": [
+      "*://*.linkedin.com/"
+    ],
+    "permissions": [
+      "cookies"
+    ],
     "action":{
         "default_popup": "index.html",
-        "default_title": "Latest Covid Report"
+        "default_title": "Latest LinkedIn Stats"
     }
 }

@@ -14,7 +14,7 @@ async function setConnectionCount(domain, api) {
     xhr.onload = function() {
         if (xhr.status == 200) {
             let data = JSON.parse(this.response);
-            document.getElementById("connectionsCount").innerHTML = data.connectionsCount;
+            document.getElementById("connectionsCount").innerText = data.connectionsCount;
         }
     }
 
@@ -34,7 +34,7 @@ async function setMessagesCount(domain, api) {
             data.elements.forEach(element => {
                 messageCount = messageCount + element.totalEventCount;
             });
-            document.getElementById("messagesCount").innerHTML = messageCount;
+            document.getElementById("messagesCount").innerText = messageCount;
         }
     }
 
@@ -49,13 +49,15 @@ async function setFollowingCount(domain, api) {
 
     xhr.onload = function() {
         if (xhr.status == 200) {
-            let data = JSON.parse(this.response);
-            document.getElementById("followersCount").innerHTML = data.followersCount;
+            const data = JSON.parse(this.response);
+            document.getElementById("followersCount").innerText = data.followersCount;
         }
     }
 
     xhr.send();
 }
+
+
 
 setConnectionCount(domain, profileNetworkApi);
 setMessagesCount(domain, converstionsApi);
